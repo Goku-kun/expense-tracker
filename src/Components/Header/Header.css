@@ -1,3 +1,6 @@
 header {
   font-family: 'Poppins', sans-serif;
 }
+header h1 {
+  margin-bottom: 1%;
+}

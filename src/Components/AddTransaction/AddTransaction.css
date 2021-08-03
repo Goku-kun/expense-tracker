@@ -42,7 +42,6 @@ button.btn {
     cursor: pointer;
     border: 0;
     display: block;
-    font-size: 16px;
     margin: 10px 0 30px;
     padding: 10px;
     width: 100%;
@@ -69,7 +68,7 @@ button.btn:hover {
   border-radius: 8px;
   border-bottom: 4px solid #c24648;
   color: white;
-  padding: 15px 15px;
+  padding: 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -84,7 +83,7 @@ button.btn:active {
   border-radius: 8px;
   border-bottom: 4px solid #c24648;
   color: #ccc;
-  padding: 15px 32px;
+  padding: 15px 18px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -92,7 +91,22 @@ button.btn:active {
   letter-spacing: 1.5px;
 
 }
+button[type="submit"] {
+  background-color: rebeccapurple;
+  border-bottom: 4px solid rebeccapurple;
 
+}
+button[type="submit"]:hover {
+  background-color: rgb(153, 50, 204);
+  border-bottom: 4px solid ;
+
+}
+button[type="submit"]:active {
+  
+  background-color: rgb(104, 32, 139);
+  border-bottom: 4px solid rgb(104, 32, 139);
+  color: white;
+}
 .tooltip {
   position: relative;
   display: inline-block;
