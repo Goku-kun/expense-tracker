@@ -1,0 +1,9 @@
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.transaction-list {
+  background-color: white;
+}
