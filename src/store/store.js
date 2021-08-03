@@ -4,10 +4,13 @@ import {
   delete_expense,
   ADD_EXPENSE,
   DELETE_EXPENSE,
+  RESET_EXPENSE,
+  reset_expense,
 } from "./actions";
 import {
   retrieveFromLocalStorage,
   writeToLocalStorage,
+  clearLocalStorage,
 } from "../utils/storage";
 
 var initialState = retrieveFromLocalStorage() || {
@@ -56,6 +59,16 @@ function reducer(state = initialState, action) {
       return { ...state, records, total, income, expense };
     }
 
+    case RESET_EXPENSE: {
+      clearLocalStorage();
+      return {
+        total: 0,
+        income: 0,
+        expense: 0,
+        records: [],
+      };
+    }
+
     default:
       return state;
   }
@@ -67,10 +80,11 @@ const store = createStore(
 );
 
 const actions = bindActionCreators(
-  { add_expense, delete_expense },
+  { add_expense, delete_expense, reset_expense },
   store.dispatch
 );
 
 var add_it = actions.add_expense;
 var delete_it = actions.delete_expense;
-export { store, add_it, delete_it };
+var reset_it = actions.reset_expense;
+export { store, add_it, delete_it, reset_it };
