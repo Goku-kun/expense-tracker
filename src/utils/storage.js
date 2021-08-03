@@ -5,8 +5,11 @@ export function writeToLocalStorage(state) {
 
 export function retrieveFromLocalStorage() {
   const retrieved_state = window.localStorage.getItem("state_transactions");
-  console.log("here");
-  console.log(retrieved_state);
-  if (retrieved_state === undefined) return undefined;
+  // eslint-disable-next-line eqeqeq
+  if (retrieved_state == undefined) return undefined;
   return JSON.parse(retrieved_state);
+}
+
+export function clearLocalStorage() {
+  window.localStorage.removeItem("state_transactions");
 }

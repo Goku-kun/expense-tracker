@@ -25,13 +25,14 @@ export default function AddTransaction() {
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder="Enter text..."
+            required
           />
         </div>
         <div className="form-control">
           <label htmlFor="amount" className="tooltip">
             <strong>Amount</strong>
             <br />
-            <span class="tooltiptext">
+            <span className="tooltiptext">
               postive value represents income
               <br /> negative represents expense
             </span>

@@ -4,6 +4,7 @@ import AddTransaction from "./Components/AddTransaction/AddTransaction";
 import Balance from "./Components/Balance/Balance";
 import Header from "./Components/Header/Header";
 import IncomeExpense from "./Components/IncomeExpense/IncomeExpense";
+import ResetAllTransactions from "./Components/ResetAllTransactions/ResetAllTransactions";
 import TransactionList from "./Components/TransactionList/TransactionList";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Balance />
         <IncomeExpense />
         <TransactionList />
+        <ResetAllTransactions />
       </div>
       <AddTransaction />
       <h2 className="acknowledgement">
